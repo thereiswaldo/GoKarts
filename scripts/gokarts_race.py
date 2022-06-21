@@ -90,7 +90,7 @@ class Race:
 
     def get_filtered_lap_mean(self):
         race_results = self.get_race_results()
-        race_results[race_results > 35] = np.nan
+        race_results[race_results > 40] = np.nan
         return self.get_race_finish_times(race_results) / self.get_lap_count(
             True, race_results
         )
